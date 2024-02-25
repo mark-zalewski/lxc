@@ -35,6 +35,7 @@ Make a note of the device addresses:
 
 8.) Update the LXC config file located at `/etc/pve/lxc`  Add the following lines, the first 3 are the address locations of the NVIDIA devices.  The last five are the NVIDIA devices themselves being mounted into the container.
 ```
+lxc.cgroup2.devices.allow: a
 lxc.cgroup2.devices.allow: c 195:* rwm
 lxc.cgroup2.devices.allow: c 507:* rwm
 lxc.cgroup2.devices.allow: c 510:* rwm
