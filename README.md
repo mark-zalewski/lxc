@@ -54,3 +54,5 @@ lxc.mount.entry: /dev/nvidia-uvm-tools dev/nvidia-uvm-tools none bind,optional,c
 
 3.) Install drivers without kernal module.  Since the LXC container is only getting the GPU as a passthrough, we don't need to load the kernel drivers again.
 `./NVIDIA-Linux-x86_64-535.86.05.run --no-kernel-module`
+
+4.) Run `nvidia-smi` to ensure the drivers are working. Note: any running transcodes will not show up on the LCX host, only on the hypervisor host itself.
